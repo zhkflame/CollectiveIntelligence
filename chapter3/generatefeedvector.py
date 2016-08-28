@@ -9,8 +9,10 @@ def getwordcounts(url):
 
   # Loop over all the entries
   for e in d.entries:
-    if 'summary' in e: summary=e.summary
-    else: summary=e.description
+    if 'summary' in e:
+      summary=e.summary
+    else:
+      summary=e.description
 
     # Extract a list of words
     words=getwords(e.title+' '+summary)
